@@ -2,15 +2,22 @@
 #   dimension:id {sql: 1;;}
 #   }
 view: users {
+<<<<<<< HEAD
   sql_table_name: demo_db.users ;;
+=======
+  sql_table_name:
+public.users
+  ;;
+>>>>>>> branch 'master' of git@github.com:seanlhiggins/proservepatterns.git
   ## Demographics ##
 
 
   dimension: id {
     primary_key: yes
-    type: number
-    sql: ${TABLE}.id ;;
+    type: date
+    # sql: ${TABLE}.id ;;
     tags: ["user_id"]
+    expression: add_minutes(123,now());;
   }
 
   filter: user_id_selector {
@@ -44,6 +51,7 @@ view: users {
   dimension: age {
     type: number
     sql: ${TABLE}.age ;;
+    # required_access_grants: [can_see_pii_fields]
   }
 
   dimension: age_tier {
@@ -163,8 +171,9 @@ view: users {
   ## Other User Information ##
 
   dimension_group: created {
+    label: "user_created_at"
     type: time
-#     timeframes: [time, date, week, month, raw]
+    timeframes: [time, date, week, month, raw]
     sql: ${TABLE}.created_at ;;
   }
 

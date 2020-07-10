@@ -1,7 +1,7 @@
 connection: "snowlooker"
 label: "1) eCommerce with Event Data Shiggins"
 include: "../Views/*.view" # include all the views
-# include: "business_pulse.dashboard"
+include: "../Dashboards/business_pulse.dashboard"
 # include: "byoms.dashboard"
 # include: "criteo*.dashboard"
 # include: "dynamic_criteo_test.dashboard"
@@ -42,11 +42,12 @@ persist_with: ecommerce_etl
 
 explore: order_items {
 
-
+#test
 
 
   from: order_items
   label: "(1) Orders, Items and Users"
+  description: "This is another test FAIL IF SHOWING THIS MESSAGE"
   view_name: order_items
 
 
@@ -225,15 +226,15 @@ explore: affinity {
   }
 }
 
-explore: orders_with_share_of_wallet_application {
-  label: "(5) Share of Wallet Analysis"
-  extends: [order_items]
-  view_name: order_items
+# explore: orders_with_share_of_wallet_application {
+#   label: "(5) Share of Wallet Analysis"
+#   extends: [order_items]
+#   view_name: order_items
 
-  join: order_items_share_of_wallet {
-    view_label: "Share of Wallet"
-  }
-}
+#   join: order_items_share_of_wallet {
+#     view_label: "Share of Wallet"
+#   }
+# }
 
 # explore: journey_mapping {
 #   label: "(6) Customer Journey Mapping"
