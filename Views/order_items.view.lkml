@@ -92,7 +92,7 @@ view: order_items_brand_by_year {
 #     drill_fields: [detail*]
 #     sql: ${order_id} ;;
 #   }
-<<<<<<< HEAD
+
 #   dimension: total_sale_price {
 #     value_format: "$#,##0.00"
 #     type: number
@@ -256,12 +256,12 @@ view: order_items_brand_by_year {
 # # Filters {
 #   filter: custom_date_filter {
 #     type: date
-=======
+
 #   measure: count_last_28d {
 #     label: "Count Sold in Trailing 28 Days"
 #     type: count_distinct
 #     sql: ${id} ;;
->>>>>>> branch 'master' of git@github.com:seanlhiggins/proservepatterns.git
+
 #     hidden: yes
 #     filters:
 #     {field:created_date
@@ -523,8 +523,8 @@ view: order_items_brand_by_year {
 # }
 
  view: order_items {
-<<<<<<< HEAD
-    sql_table_name: demo_db.order_items ;;
+
+
     # sql_table_name:
     # {% if dimension_selector._parameter_value == 'A' and subdimension_selector._parameter_value == 'A' %} AA {{dimension_selector._parameter_value}}{{subdimension_selector._parameter_value}}
     # {% elsif dimension_selector._parameter_value == 'A' and subdimension_selector._parameter_value == 'B' %} AB {{dimension_selector._parameter_value}}{{subdimension_selector._parameter_value}}
@@ -545,9 +545,9 @@ view: order_items_brand_by_year {
     #   allowed_value: {value:"A"}
     #   allowed_value: {value:"B"}
     # }
-=======
+
     sql_table_name: public.order_items ;;
->>>>>>> branch 'master' of git@github.com:seanlhiggins/proservepatterns.git
+
 
     ########## IDs, Foreign Keys, Counts ###########
 

@@ -1,6 +1,6 @@
 connection: "snowlooker"
 label: "1) eCommerce with Event Data Shiggins"
-include: "../Views/*.view" # include all the views
+include: "../Views/*" # include all the views
 include: "../Dashboards/business_pulse.dashboard"
 # include: "byoms.dashboard"
 # include: "criteo*.dashboard"

@@ -2,13 +2,10 @@
 #   dimension:id {sql: 1;;}
 #   }
 view: users {
-<<<<<<< HEAD
-  sql_table_name: demo_db.users ;;
-=======
-  sql_table_name:
-public.users
-  ;;
->>>>>>> branch 'master' of git@github.com:seanlhiggins/proservepatterns.git
+
+  sql_table_name: public.users ;;
+
+
   ## Demographics ##
 
 
@@ -203,12 +200,12 @@ public.users
                 THEN ${ssn}
                 ELSE MD5(${ssn}||'salt')
           END;;
-    html:
-          {% if _user_attributes["can_see_sensitive_data"]  == 'yes' %}
-          {{ value }}
-          {% else %}
-            ####
-          {% endif %}  ;;
+    # html:
+    #       {% if _user_attributes["can_see_sensitive_data"]  == 'yes' %}
+    #       {{ value }}
+    #       {% else %}
+    #         ####
+    #       {% endif %}  ;;
   }
 
   ## MEASURES ##
